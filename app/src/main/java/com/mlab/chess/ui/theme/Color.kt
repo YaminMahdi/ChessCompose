@@ -72,6 +72,6 @@ object ChessColor {
 //    val error = Color(0x80FF0000)
     val lightSquare = Color(0xFFEEEED2)
     val darkSquare = Color(0xFF44A98C)
-    val highlight = Color(0x80FFFF00)
+    val highlight = Color(0xFFFFA500)
     val error = Color(0x80FF0000)
 }
