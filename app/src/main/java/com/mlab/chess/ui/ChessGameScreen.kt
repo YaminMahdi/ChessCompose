@@ -1,11 +1,7 @@
 package com.mlab.chess.ui
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -57,47 +53,35 @@ fun ChessGameScreen(
         Spacer(modifier = Modifier.height(16.dp))
         
         // Chess board in the center
-        Box(
-            modifier = Modifier
-                .fillMaxWidth(),
-            contentAlignment = Alignment.Center
-        ) {
-            ChessBoard(
-                gameState = gameState,
-                onSquareClicked = { position ->
-                    if (!isAnimating) {
-                        viewModel.selectPiece(position)
-                    }
-                },
-                animationState = pieceAnimationState,
-                invalidMovePosition = invalidMovePosition,
-                hoverPosition = hoverPosition,
-                onSquareHovered = { position ->
-                    viewModel.updateHoverPosition(position)
-                },
-                squareSize = 40.dp,
-                onAnimationComplete = {
-                    // Update game status after animation completes
-                    viewModel.updateGameStatus()
+        ChessBoard(
+            gameState = gameState,
+            onSquareClicked = { position ->
+                if (!isAnimating) {
+                    viewModel.selectPiece(position)
                 }
-            )
-        }
+            },
+            animationState = pieceAnimationState,
+            invalidMovePosition = invalidMovePosition,
+            hoverPosition = hoverPosition,
+            onSquareHovered = { position ->
+                viewModel.updateHoverPosition(position)
+            },
+            onAnimationComplete = {
+                // Update game status after animation completes
+                viewModel.updateGameStatus()
+            }
+        )
         
         Spacer(modifier = Modifier.height(16.dp))
         
         // Game controls at the bottom
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center
+        Button(
+            onClick = { viewModel.resetGame() },
+            colors = ButtonDefaults.buttonColors(
+                containerColor = MaterialTheme.colorScheme.secondary
+            )
         ) {
-            Button(
-                onClick = { viewModel.resetGame() },
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.secondary
-                )
-            ) {
-                Text("Reset Game")
-            }
+            Text("Reset Game")
         }
     }
 }

@@ -2,7 +2,6 @@ package com.mlab.chess.model.rules
 
 import com.mlab.chess.model.ChessPiece
 import com.mlab.chess.model.PieceColor
-import com.mlab.chess.model.PieceType
 import com.mlab.chess.model.Position
 
 /**

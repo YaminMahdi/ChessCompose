@@ -76,7 +76,6 @@ fun ChessBoardDemo() {
                 invalidMovePosition = invalidMovePosition,
                 hoverPosition = hoverPosition,
                 onSquareHovered = { position -> viewModel.updateHoverPosition(position) },
-                squareSize = 48.dp,
                 onAnimationComplete = { /* Animation completed */ }
             )
         }

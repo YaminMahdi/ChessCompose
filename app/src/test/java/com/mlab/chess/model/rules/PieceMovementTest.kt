@@ -4,7 +4,9 @@ import com.mlab.chess.model.ChessPiece
 import com.mlab.chess.model.PieceColor
 import com.mlab.chess.model.PieceType
 import com.mlab.chess.model.Position
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 

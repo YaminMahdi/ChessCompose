@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.mlab.chess.Chess
 
-public val Chess.`Knight-b`: ImageVector
+val Chess.`Knight-b`: ImageVector
     get() {
         if (`_knight-b` != null) {
             return `_knight-b`!!

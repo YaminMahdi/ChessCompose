@@ -24,10 +24,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mlab.chess.model.GameState
@@ -43,7 +43,6 @@ import com.mlab.chess.ui.theme.ChessColor
  * @param hoverPosition Position currently being hovered, for hover effects
  * @param onSquareHovered Callback for when a square is hovered, with the position as parameter
  * @param modifier Modifier for the composable
- * @param squareSize The size of each square on the board
  * @param lightSquareColor The color for light squares
  * @param darkSquareColor The color for dark squares
  * @param highlightColor The color for highlighting selected pieces and valid moves
@@ -60,7 +59,6 @@ fun ChessBoard(
     hoverPosition: Position? = null,
     onSquareHovered: ((Position?) -> Unit)? = null,
     modifier: Modifier = Modifier,
-    squareSize: Dp = 48.dp,
 //    lightSquareColor: Color = Color(0xFF778BCE),
 //    darkSquareColor: Color = Color(0xFF3252BD),
 //    highlightColor: Color = Color(0x80FFFF00),
@@ -73,6 +71,8 @@ fun ChessBoard(
     onAnimationComplete: () -> Unit = {}
 ) {
     val coordinateSize = if (showCoordinates) 20.dp else 0.dp
+    val screenWidth = LocalConfiguration.current.screenWidthDp.dp
+    val squareSize = screenWidth / 9
 
     Box(
         modifier = modifier

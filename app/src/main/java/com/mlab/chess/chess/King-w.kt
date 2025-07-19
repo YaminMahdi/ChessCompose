@@ -1,8 +1,5 @@
 package com.mlab.chess.chess
 
-import androidx.compose.foundation.Image
-import androidx.compose.material3.Icon
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
 import androidx.compose.ui.graphics.SolidColor
@@ -13,11 +10,10 @@ import androidx.compose.ui.graphics.StrokeJoin.Companion.Miter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.ImageVector.Builder
 import androidx.compose.ui.graphics.vector.path
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mlab.chess.Chess
 
-public val Chess.`King-w`: ImageVector
+val Chess.`King-w`: ImageVector
     get() {
         if (`_king-w` != null) {
             return `_king-w`!!
@@ -79,10 +75,3 @@ public val Chess.`King-w`: ImageVector
     }
 
 private var `_king-w`: ImageVector? = null
-
-
-@Preview
-@Composable
-private fun fdf() {
-    Image(imageVector = Chess.`King-w`, contentDescription = null)
-}

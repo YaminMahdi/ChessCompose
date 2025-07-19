@@ -2,7 +2,18 @@ package com.mlab.chess.ui
 
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.mlab.chess.Chess
-import com.mlab.chess.chess.*
+import com.mlab.chess.chess.`Bishop-b`
+import com.mlab.chess.chess.`Bishop-w`
+import com.mlab.chess.chess.`King-b`
+import com.mlab.chess.chess.`King-w`
+import com.mlab.chess.chess.`Knight-b`
+import com.mlab.chess.chess.`Knight-w`
+import com.mlab.chess.chess.`Pawn-b`
+import com.mlab.chess.chess.`Pawn-w`
+import com.mlab.chess.chess.`Queen-b`
+import com.mlab.chess.chess.`Queen-w`
+import com.mlab.chess.chess.`Rook-b`
+import com.mlab.chess.chess.`Rook-w`
 import com.mlab.chess.model.PieceColor
 import com.mlab.chess.model.PieceType
 

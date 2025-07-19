@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.mlab.chess.Chess
 
-public val Chess.`Pawn-w`: ImageVector
+val Chess.`Pawn-w`: ImageVector
     get() {
         if (`_pawn-w` != null) {
             return `_pawn-w`!!

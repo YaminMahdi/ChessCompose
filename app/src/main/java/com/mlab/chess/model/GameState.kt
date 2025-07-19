@@ -87,7 +87,7 @@ data class GameState(
         newBoard.remove(from)
         
         // If there's a piece at the destination, it's captured (removed)
-        val capturedPiece = board[to]
+        board[to]
         
         // Place the moved piece at the destination
         newBoard[to] = piece.moveTo(to)

@@ -77,7 +77,7 @@ class ChessGameViewModel : ViewModel() {
             // If trying to move to an invalid position, show invalid move feedback
             showInvalidMoveFeedback(position)
             // Keep the piece selected
-        } else if (piece != null && piece.color != currentState.currentPlayer) {
+        } else if (piece != null) {
             // If trying to select opponent's piece, show invalid selection feedback
             showInvalidMoveFeedback(position)
         } else {

@@ -15,11 +15,11 @@ import com.mlab.chess.chess.`Rook-b`
 import com.mlab.chess.chess.`Rook-w`
 import kotlin.collections.List as ____KtList
 
-public object Chess
+object Chess
 
 private var __Chess: ____KtList<ImageVector>? = null
 
-public val Chess.Chess: ____KtList<ImageVector>
+val Chess.Chess: ____KtList<ImageVector>
   get() {
     if (__Chess != null) {
       return __Chess!!

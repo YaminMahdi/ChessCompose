@@ -7,14 +7,13 @@ import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
 import androidx.compose.ui.graphics.StrokeCap.Companion.Round
 import androidx.compose.ui.graphics.StrokeCap.Companion.Square
 import androidx.compose.ui.graphics.StrokeJoin
-import androidx.compose.ui.graphics.StrokeJoin.Companion.Miter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.ImageVector.Builder
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.mlab.chess.Chess
 
-public val Chess.`King-b`: ImageVector
+val Chess.`King-b`: ImageVector
     get() {
         if (`_king-b` != null) {
             return `_king-b`!!
