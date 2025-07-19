@@ -22,7 +22,7 @@ public val Chess.`Rook-w`: ImageVector
         }
         `_rook-w` = Builder(name = "Rook-w", defaultWidth = 128.0.dp, defaultHeight = 128.0.dp,
                 viewportWidth = 45.0f, viewportHeight = 45.0f).apply {
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(11.0f, 14.0f)
@@ -47,7 +47,7 @@ public val Chess.`Rook-w`: ImageVector
                 lineTo(14.0f, 17.0f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(9.0f, 39.0f)

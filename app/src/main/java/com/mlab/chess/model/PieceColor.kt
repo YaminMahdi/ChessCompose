@@ -1,7 +1,7 @@
 package com.mlab.chess.model
 
 /**
- * Enum representing the color of chess pieces
+ * Represents the color of a chess piece
  */
 enum class PieceColor {
     WHITE,
@@ -9,9 +9,7 @@ enum class PieceColor {
     
     /**
      * Returns the opposite color
+     * @return BLACK if this is WHITE, WHITE if this is BLACK
      */
-    fun opposite(): PieceColor = when (this) {
-        WHITE -> BLACK
-        BLACK -> WHITE
-    }
+    fun opposite(): PieceColor = if (this == WHITE) BLACK else WHITE
 }

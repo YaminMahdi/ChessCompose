@@ -95,19 +95,19 @@ public val Chess.`Queen-b`: ImageVector
                 curveTo(27.5f, 24.5f, 17.5f, 24.5f, 9.0f, 26.0f)
                 close()
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 1.5f, strokeLineCap = StrokeCap.Companion.Round,
                     strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(9.0f, 26.0f)
                 curveTo(17.5f, 24.5f, 30.0f, 24.5f, 36.0f, 26.0f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 1.5f, strokeLineCap = StrokeCap.Companion.Round,
                     strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(11.5f, 30.0f)
                 curveTo(15.0f, 29.0f, 30.0f, 29.0f, 33.5f, 30.0f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 1.5f, strokeLineCap = StrokeCap.Companion.Round,
                     strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(12.0f, 33.5f)

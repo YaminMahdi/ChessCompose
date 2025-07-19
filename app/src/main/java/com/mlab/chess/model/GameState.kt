@@ -1,5 +1,9 @@
 package com.mlab.chess.model
 
+import com.mlab.chess.model.rules.ChessRules
+import com.mlab.chess.model.rules.GameStateValidator
+import com.mlab.chess.model.rules.StandardChessRules
+
 /**
  * Represents the complete state of a chess game
  * @param board Map of positions to chess pieces on the board
@@ -62,6 +66,89 @@ data class GameState(
             selectedPiece = null,
             validMoves = emptySet()
         )
+    }
+    
+    /**
+     * Creates a new GameState with a piece moved from one position to another,
+     * capturing any piece at the destination
+     * @param from The starting position
+     * @param to The destination position
+     * @return A new GameState with the piece moved, any captured piece removed, and turn switched
+     */
+    fun movePieceWithCapture(from: Position, to: Position): GameState {
+        if (!from.isValid() || !to.isValid()) return this
+        
+        val piece = board[from] ?: return this
+        
+        // Create new board with the piece moved
+        val newBoard = board.toMutableMap()
+        
+        // Remove the piece from its original position
+        newBoard.remove(from)
+        
+        // If there's a piece at the destination, it's captured (removed)
+        val capturedPiece = board[to]
+        
+        // Place the moved piece at the destination
+        newBoard[to] = piece.moveTo(to)
+        
+        return copy(
+            board = newBoard,
+            currentPlayer = currentPlayer.opposite(),
+            selectedPiece = null,
+            validMoves = emptySet()
+        )
+    }
+    
+    /**
+     * Selects a piece and calculates its valid moves
+     * @param position The position of the piece to select
+     * @param chessRules The chess rules to use for move validation
+     * @return A new GameState with the piece selected and valid moves calculated
+     */
+    fun selectPiece(position: Position, chessRules: ChessRules = StandardChessRules()): GameState {
+        val piece = getPieceAt(position) ?: return this
+        
+        // Can only select pieces of the current player's color
+        if (piece.color != currentPlayer) {
+            return this
+        }
+        
+        // Calculate valid moves for the selected piece
+        val validMoves = chessRules.getValidMoves(piece, board).filter { 
+            chessRules.validateKingSafety(position, it, board) 
+        }.toSet()
+        
+        return copy(
+            selectedPiece = position,
+            validMoves = validMoves
+        )
+    }
+    
+    /**
+     * Attempts to move a piece with validation
+     * @param from The starting position
+     * @param to The destination position
+     * @param validator The game state validator to use
+     * @return A new GameState with the move executed if valid, or the original state if invalid
+     */
+    fun tryMove(
+        from: Position, 
+        to: Position, 
+        validator: GameStateValidator = GameStateValidator(StandardChessRules())
+    ): GameState {
+        return validator.validateAndMove(from, to, this)
+    }
+    
+    /**
+     * Updates the game status based on the current board state
+     * @param validator The game state validator to use
+     * @return A new GameState with updated game status
+     */
+    fun updateGameStatus(
+        validator: GameStateValidator = GameStateValidator(StandardChessRules())
+    ): GameState {
+        return validator.updateGameStatus(this)
     }
     
     companion object {

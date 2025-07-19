@@ -6,12 +6,14 @@ package com.mlab.chess.model
  * @param color The color of the piece (White or Black)
  * @param position The current position of the piece on the board
  * @param hasMoved Whether the piece has moved (useful for castling and pawn first move)
+ * @param justMovedTwoSquares Whether a pawn just moved two squares (useful for en passant)
  */
 data class ChessPiece(
     val type: PieceType,
     val color: PieceColor,
     val position: Position,
-    val hasMoved: Boolean = false
+    val hasMoved: Boolean = false,
+    val justMovedTwoSquares: Boolean = false
 ) {
     /**
      * Creates a copy of this piece at a new position and marks it as moved
@@ -19,7 +21,15 @@ data class ChessPiece(
      * @return A new ChessPiece at the specified position with hasMoved set to true
      */
     fun moveTo(newPosition: Position): ChessPiece {
-        return copy(position = newPosition, hasMoved = true)
+        val movedTwoSquares = type == PieceType.PAWN && 
+                             !hasMoved && 
+                             kotlin.math.abs(position.row - newPosition.row) == 2
+        
+        return copy(
+            position = newPosition, 
+            hasMoved = true,
+            justMovedTwoSquares = movedTwoSquares
+        )
     }
     
     /**

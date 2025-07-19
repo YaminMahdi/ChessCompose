@@ -57,31 +57,31 @@ public val Chess.`Rook-b`: ImageVector
                 lineTo(9.0f, 39.0f)
                 close()
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 1.2f, strokeLineCap = StrokeCap.Companion.Round,
                     strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(11.0f, 14.0f)
                 lineTo(34.0f, 14.0f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 0.8f, strokeLineCap = StrokeCap.Companion.Round,
                     strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(14.0f, 17.0f)
                 lineTo(31.0f, 17.0f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 0.8f, strokeLineCap = StrokeCap.Companion.Round,
                     strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(14.0f, 29.5f)
                 lineTo(31.0f, 29.5f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 1.2f, strokeLineCap = StrokeCap.Companion.Round,
                     strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(12.0f, 32.0f)
                 lineTo(33.0f, 32.0f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 1.2f, strokeLineCap = StrokeCap.Companion.Round,
                     strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(12.0f, 35.5f)

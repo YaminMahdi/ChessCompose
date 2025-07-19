@@ -1,12 +1,10 @@
 package com.mlab.chess.chess
 
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
-import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.StrokeJoin.Companion.Miter
 import androidx.compose.ui.graphics.StrokeJoin.Companion.Round
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -22,7 +20,7 @@ public val Chess.`Bishop-w`: ImageVector
         }
         `_bishop-w` = Builder(name = "Bishop-w", defaultWidth = 128.0.dp, defaultHeight = 128.0.dp,
                 viewportWidth = 45.0f, viewportHeight = 45.0f).apply {
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(22.5f, 8.0f)
@@ -30,7 +28,7 @@ public val Chess.`Bishop-w`: ImageVector
                 arcToRelative(2.5f, 2.5f, 0.0f, true, true, 5.0f, 0.0f)
                 arcToRelative(2.5f, 2.5f, 0.0f, true, true, -5.0f, 0.0f)
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(15.0f, 32.0f)
@@ -43,7 +41,7 @@ public val Chess.`Bishop-w`: ImageVector
                 curveTo(15.0f, 30.0f, 14.5f, 30.5f, 15.0f, 32.0f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(9.0f, 36.0f)
@@ -69,7 +67,7 @@ public val Chess.`Bishop-w`: ImageVector
                 moveTo(15.0f, 30.0f)
                 lineTo(30.0f, 30.0f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00FFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = StrokeCap.Companion.Round,
                     strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(22.5f, 15.0f)

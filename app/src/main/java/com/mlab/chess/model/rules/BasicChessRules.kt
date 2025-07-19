@@ -16,7 +16,20 @@ class BasicChessRules : ChessRules {
         return emptySet()
     }
     
-    override fun isInCheck(kingPosition: Position, board: Map<Position, ChessPiece>, kingColor: PieceColor): Boolean {
+    override fun isValidMove(from: Position, to: Position, board: Map<Position, ChessPiece>): Boolean {
+        val piece = board[from] ?: return false
+        
+        // Get all valid moves for the piece
+        val validMoves = getValidMoves(piece, board)
+        
+        // Check if the destination is in the valid moves
+        return to in validMoves && validateKingSafety(from, to, board)
+    }
+    
+    override fun isInCheck(kingColor: PieceColor, board: Map<Position, ChessPiece>): Boolean {
+        // Find the king's position
+        val kingPosition = PositionUtils.findKingPosition(board, kingColor) ?: return false
+        
         // Check if the king's position is under attack by any opponent piece
         return PositionUtils.isPositionUnderAttack(
             kingPosition,
@@ -25,44 +38,29 @@ class BasicChessRules : ChessRules {
         )
     }
     
-    override fun isMoveLegal(from: Position, to: Position, board: Map<Position, ChessPiece>): Boolean {
+    override fun validateKingSafety(from: Position, to: Position, board: Map<Position, ChessPiece>): Boolean {
         val piece = board[from] ?: return false
         
         // Simulate the move
         val simulatedBoard = PositionUtils.simulateMove(from, to, board)
         
-        // Find the king's position after the move
-        val kingPosition = if (piece.type == PieceType.KING) {
-            // If we're moving the king, use the destination position
-            to
-        } else {
-            // Otherwise, find the king of the same color
-            PositionUtils.findKingPosition(simulatedBoard, piece.color) ?: return false
-        }
-        
-        // Check if the king would be in check after the move
-        return !isInCheck(kingPosition, simulatedBoard, piece.color)
+        // Check if the king is in check after the move
+        return !isInCheck(piece.color, simulatedBoard)
     }
     
-    override fun isCheckmate(color: PieceColor, board: Map<Position, ChessPiece>): Boolean {
-        // Find the king
-        val kingPosition = PositionUtils.findKingPosition(board, color) ?: return false
-        
+    override fun isCheckmate(kingColor: PieceColor, board: Map<Position, ChessPiece>): Boolean {
         // Check if the king is in check
-        if (!isInCheck(kingPosition, board, color)) {
+        if (!isInCheck(kingColor, board)) {
             return false // Not in check, so not checkmate
         }
         
         // Check if any piece of this color has a legal move
-        return !hasAnyLegalMove(color, board)
+        return !hasAnyLegalMove(kingColor, board)
     }
     
     override fun isStalemate(color: PieceColor, board: Map<Position, ChessPiece>): Boolean {
-        // Find the king
-        val kingPosition = PositionUtils.findKingPosition(board, color) ?: return false
-        
         // Check if the king is in check
-        if (isInCheck(kingPosition, board, color)) {
+        if (isInCheck(color, board)) {
             return false // In check, so not stalemate
         }
         
@@ -87,7 +85,7 @@ class BasicChessRules : ChessRules {
             
             // Check if any of these moves are legal
             for (move in potentialMoves) {
-                if (isMoveLegal(piece.position, move, board)) {
+                if (validateKingSafety(piece.position, move, board)) {
                     return true // Found a legal move
                 }
             }

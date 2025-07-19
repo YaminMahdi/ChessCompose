@@ -1,10 +1,8 @@
 package com.mlab.chess.chess
 
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
 import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
 import androidx.compose.ui.graphics.StrokeCap.Companion.Round
 import androidx.compose.ui.graphics.StrokeJoin
@@ -21,7 +19,7 @@ public val Chess.`Knight-w`: ImageVector
         }
         `_knight-w` = Builder(name = "Knight-w", defaultWidth = 128.0.dp, defaultHeight = 128.0.dp,
                 viewportWidth = 45.0f, viewportHeight = 45.0f).apply {
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Round, strokeLineJoin =
                     StrokeJoin.Companion.Round, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(22.0f, 10.0f)
@@ -29,7 +27,7 @@ public val Chess.`Knight-w`: ImageVector
                 lineTo(15.0f, 39.0f)
                 curveTo(15.0f, 30.0f, 25.0f, 32.5f, 23.0f, 18.0f)
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Round, strokeLineJoin =
                     StrokeJoin.Companion.Round, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(24.0f, 18.0f)
@@ -46,7 +44,7 @@ public val Chess.`Knight-w`: ImageVector
                 curveTo(18.5f, 10.0f, 19.28f, 8.008f, 21.0f, 7.0f)
                 curveTo(22.0f, 7.0f, 22.0f, 10.0f, 22.0f, 10.0f)
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin =
                     StrokeJoin.Companion.Round, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(9.5f, 25.5f)
@@ -54,7 +52,7 @@ public val Chess.`Knight-w`: ImageVector
                 arcTo(0.5f, 0.5f, 0.0f, true, true, 9.5f, 25.5f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin =
                     StrokeJoin.Companion.Round, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(15.25f, 14.2f)

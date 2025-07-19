@@ -1,10 +1,11 @@
 package com.mlab.chess.chess
 
+import androidx.compose.foundation.Image
+import androidx.compose.material3.Icon
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
 import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
 import androidx.compose.ui.graphics.StrokeCap.Companion.Round
 import androidx.compose.ui.graphics.StrokeJoin
@@ -12,6 +13,7 @@ import androidx.compose.ui.graphics.StrokeJoin.Companion.Miter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.ImageVector.Builder
 import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mlab.chess.Chess
 
@@ -30,7 +32,7 @@ public val Chess.`King-w`: ImageVector
                 moveTo(20.0f, 8.0f)
                 lineTo(25.0f, 8.0f)
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin =
                     StrokeJoin.Companion.Round, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(22.5f, 25.0f)
@@ -39,7 +41,7 @@ public val Chess.`King-w`: ImageVector
                 curveTo(20.5f, 12.0f, 19.5f, 14.5f, 19.5f, 14.5f)
                 curveTo(18.0f, 17.5f, 22.5f, 25.0f, 22.5f, 25.0f)
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color( 0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin =
                     StrokeJoin.Companion.Round, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(11.5f, 37.0f)
@@ -77,3 +79,10 @@ public val Chess.`King-w`: ImageVector
     }
 
 private var `_king-w`: ImageVector? = null
+
+
+@Preview
+@Composable
+private fun fdf() {
+    Image(imageVector = Chess.`King-w`, contentDescription = null)
+}

@@ -1,14 +1,13 @@
 package com.mlab.chess.chess
 
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
 import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
 import androidx.compose.ui.graphics.StrokeCap.Companion.Round
 import androidx.compose.ui.graphics.StrokeCap.Companion.Square
 import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.StrokeJoin.Companion.Miter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.ImageVector.Builder
 import androidx.compose.ui.graphics.vector.path
@@ -62,7 +61,7 @@ public val Chess.`King-b`: ImageVector
                 curveTo(21.0f, 13.0f, 20.5f, 14.5f, 20.5f, 14.5f)
                 curveTo(19.25f, 17.0f, 22.5f, 20.0f, 22.5f, 20.0f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 1.5f, strokeLineCap = Round, strokeLineJoin =
                     StrokeJoin.Companion.Round, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(32.0f, 29.5f)
@@ -73,19 +72,19 @@ public val Chess.`King-b`: ImageVector
                 curveTo(20.0f, 18.0f, 9.906f, 14.0f, 6.997f, 19.85f)
                 curveTo(4.5f, 25.5f, 11.85f, 28.85f, 11.85f, 28.85f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 1.5f, strokeLineCap = Round, strokeLineJoin =
                     StrokeJoin.Companion.Round, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(11.5f, 30.0f)
                 curveTo(17.0f, 27.0f, 27.0f, 27.0f, 32.5f, 30.0f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 1.5f, strokeLineCap = Round, strokeLineJoin =
                     StrokeJoin.Companion.Round, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(11.5f, 33.5f)
                 curveTo(17.0f, 30.5f, 27.0f, 30.5f, 32.5f, 33.5f)
             }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFFFFFFF)),
                     strokeLineWidth = 1.5f, strokeLineCap = Round, strokeLineJoin =
                     StrokeJoin.Companion.Round, strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(11.5f, 37.0f)

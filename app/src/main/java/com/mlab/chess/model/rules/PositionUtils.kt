@@ -240,7 +240,7 @@ object PositionUtils {
         }
         return null
     }
-    
+
     /**
      * Simulates a move and checks if it would leave the king in check
      * @param from The starting position
@@ -251,16 +251,24 @@ object PositionUtils {
     fun simulateMove(from: Position, to: Position, board: Map<Position, ChessPiece>): Map<Position, ChessPiece> {
         val piece = board[from] ?: return board
         val newBoard = board.toMutableMap()
-        
+
         // Remove piece from original position
         newBoard.remove(from)
-        
+
         // Capture any piece at the destination
         newBoard.remove(to)
-        
+
+        // Create a new piece with updated position
+        val movedPiece = ChessPiece(
+            type = piece.type,
+            color = piece.color,
+            position = to,  // This is the key fix - ensure position is updated
+            hasMoved = true
+        )
+
         // Place the piece at the new position
-        newBoard[to] = piece.copy(position = to, hasMoved = true)
-        
+        newBoard[to] = movedPiece
+
         return newBoard
     }
 }

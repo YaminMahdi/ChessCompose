@@ -18,7 +18,7 @@ public val Chess.`Pawn-w`: ImageVector
         }
         `_pawn-w` = Builder(name = "Pawn-w", defaultWidth = 128.0.dp, defaultHeight = 128.0.dp,
                 viewportWidth = 45.0f, viewportHeight = 45.0f).apply {
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Round, strokeLineJoin = Miter,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(22.5f, 9.0f)

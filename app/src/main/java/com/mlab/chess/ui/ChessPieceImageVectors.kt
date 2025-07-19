@@ -31,12 +31,12 @@ object ChessPieceImageVectors {
      */
     private fun getWhitePieceImageVector(type: PieceType): ImageVector {
         return when (type) {
-            PieceType.KING -> `King-w`
-            PieceType.QUEEN -> `Queen-w`
-            PieceType.ROOK -> `Rook-w`
-            PieceType.BISHOP -> `Bishop-w`
-            PieceType.KNIGHT -> `Knight-w`
-            PieceType.PAWN -> `Pawn-w`
+            PieceType.KING -> Chess.`King-w`
+            PieceType.QUEEN -> Chess.`Queen-w`
+            PieceType.ROOK -> Chess.`Rook-w`
+            PieceType.BISHOP -> Chess.`Bishop-w`
+            PieceType.KNIGHT -> Chess.`Knight-w`
+            PieceType.PAWN -> Chess.`Pawn-w`
         }
     }
     
@@ -47,12 +47,12 @@ object ChessPieceImageVectors {
      */
     private fun getBlackPieceImageVector(type: PieceType): ImageVector {
         return when (type) {
-            PieceType.KING -> `King-b`
-            PieceType.QUEEN -> `Queen-b`
-            PieceType.ROOK -> `Rook-b`
-            PieceType.BISHOP -> `Bishop-b`
-            PieceType.KNIGHT -> `Knight-b`
-            PieceType.PAWN -> `Pawn-b`
+            PieceType.KING -> Chess.`King-b`
+            PieceType.QUEEN -> Chess.`Queen-b`
+            PieceType.ROOK -> Chess.`Rook-b`
+            PieceType.BISHOP -> Chess.`Bishop-b`
+            PieceType.KNIGHT -> Chess.`Knight-b`
+            PieceType.PAWN -> Chess.`Pawn-b`
         }
     }
 }

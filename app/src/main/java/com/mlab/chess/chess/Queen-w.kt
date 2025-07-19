@@ -22,7 +22,7 @@ public val Chess.`Queen-w`: ImageVector
         }
         `_queen-w` = Builder(name = "Queen-w", defaultWidth = 128.0.dp, defaultHeight = 128.0.dp,
                 viewportWidth = 45.0f, viewportHeight = 45.0f).apply {
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(9.0f, 26.0f)
@@ -39,7 +39,7 @@ public val Chess.`Queen-w`: ImageVector
                 lineTo(9.0f, 26.0f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(6.0f, 12.0f)
@@ -47,7 +47,7 @@ public val Chess.`Queen-w`: ImageVector
                 arcToRelative(2.0f, 2.0f, 0.0f, true, true, 4.0f, 0.0f)
                 arcToRelative(2.0f, 2.0f, 0.0f, true, true, -4.0f, 0.0f)
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(14.0f, 9.0f)
@@ -55,7 +55,7 @@ public val Chess.`Queen-w`: ImageVector
                 arcToRelative(2.0f, 2.0f, 0.0f, true, true, 4.0f, 0.0f)
                 arcToRelative(2.0f, 2.0f, 0.0f, true, true, -4.0f, 0.0f)
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(22.5f, 8.0f)
@@ -63,7 +63,7 @@ public val Chess.`Queen-w`: ImageVector
                 arcToRelative(2.0f, 2.0f, 0.0f, true, true, 4.0f, 0.0f)
                 arcToRelative(2.0f, 2.0f, 0.0f, true, true, -4.0f, 0.0f)
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(31.0f, 9.0f)
@@ -71,7 +71,7 @@ public val Chess.`Queen-w`: ImageVector
                 arcToRelative(2.0f, 2.0f, 0.0f, true, true, 4.0f, 0.0f)
                 arcToRelative(2.0f, 2.0f, 0.0f, true, true, -4.0f, 0.0f)
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(39.0f, 12.0f)
@@ -79,7 +79,7 @@ public val Chess.`Queen-w`: ImageVector
                 arcToRelative(2.0f, 2.0f, 0.0f, true, true, 4.0f, 0.0f)
                 arcToRelative(2.0f, 2.0f, 0.0f, true, true, -4.0f, 0.0f)
             }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = SolidColor(Color(0xFF000000)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFF000000)),
                     strokeLineWidth = 1.5f, strokeLineCap = Butt, strokeLineJoin = Round,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(9.0f, 26.0f)
